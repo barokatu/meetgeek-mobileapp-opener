@@ -1,22 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
+
+  function launchAppOnAppleDevice() {
+      const url = "meetgeekvoicerecorder://callback?user_uuid=a0234daf-0f4c-11ed-ae4f-0242c0a8011d&escaped_string=string";
+      window.location.replace(url);
+  }
+
+  function launchAppOnAndroidDevice() {
+      const url = "intent:///#Intent;scheme=meetgeekvoicerecorder://callback?user_uuid=a0234daf-0f4c-11ed-ae4f-0242c0a8011d&escaped_string=string;package=com.meetgeek.MeetGeekVoiceRecorder;end";
+      window.location.replace(url);
+  }
+  
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button onClick={launchAppOnAppleDevice} style={{backgroundColor:"#fbb000", fontWeight: 'bolder', fontSize:12, padding: 18, borderRadius: 10, borderWidth: 0, marginBottom: 10, width: 240}}>Open on iOS</button>
+        <button onClick={launchAppOnAndroidDevice} style={{backgroundColor:"#fbb000", fontWeight: 'bolder', fontSize:12, padding: 18, borderRadius: 10, borderWidth: 0, marginBottom: 10, width: 240}}>Open on Android</button>
       </header>
     </div>
   );
