@@ -3,13 +3,15 @@ import './App.css';
 
 function App() {
 
+  const user_uuid = "a0234daf-0f4c-11ed-ae4f-0242c0a8011d"; //you can get this from the backend, and pass it by intent uri to the app
+
   function launchAppOnAppleDevice() {
-      const url = "meetgeekvoicerecorder://callback?user_uuid=a0234daf-0f4c-11ed-ae4f-0242c0a8011d&escaped_string=string";
+      const url = `meetgeekvoicerecorder://callback?user_uuid=${user_uuid}&escaped_string=string`;
       window.location.replace(url);
   }
 
   function launchAppOnAndroidDevice() {
-      const url = "intent:///#Intent;scheme=meetgeekvoicerecorder://callback?user_uuid=a0234daf-0f4c-11ed-ae4f-0242c0a8011d&escaped_string=string;package=com.meetgeek.MeetGeekVoiceRecorder;end";
+      const url = `intent:///#Intent;scheme=meetgeekvoicerecorder://callback?user_uuid=${user_uuid}&escaped_string=string;package=com.meetgeek.MeetGeekVoiceRecorder;end`;
       window.location.replace(url);
   }
   
