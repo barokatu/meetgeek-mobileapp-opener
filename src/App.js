@@ -11,7 +11,7 @@ function App() {
   }
 
   function launchAppOnAndroidDevice() {
-      const url = `intent:///#Intent;scheme=meetgeekvoicerecorder://callback?cookie=${user_uuid}&escaped_string=string;package=com.meetgeek.MeetGeekVoiceRecorder;end`;
+      const url = `intent:///#Intent;scheme=meetgeekvoicerecorder://callback?cookie=${user_uuid}&escaped_string=string;package=com.meetgeek.assistant;end`;
       window.location.replace(url);
   }
   
