@@ -3,15 +3,15 @@ import './App.css';
 
 function App() {
 
-  const user_uuid = "a0234daf-0f4c-11ed-ae4f-0242c0a8011d"; //you can get this from the backend, and pass it by intent uri to the app
+  const user_uuid = "eyJpdiI6IlZFSkRHaFVhV2FhOW9pMWpYMXJTMkE9PSIsInZhbHVlIjoia2l5TjU5S0dZRVEzYlNudjJJMWtqQktTaThzTStIbXRWMFhySFdJYWwyRDlrTm45M2cwbU80anlFWlJscTVIUXVaYTVIWis4c1duUDd4ZWlKK255R3N0Nk84R0pBemo5T0JzaHp2S0lZeURPZFdNMHYvSHhWNThJTVBQMk1CMFEiLCJtYWMiOiI2MGI1Zjg1YmY3ZDQ1YjVkYmM4MGQ3MTA3ZDE4YmRkZWExZDllOWNlZDc0ZGM4YjFkMjM0MDY1MWRlNDU0NWVjIiwidGFnIjoiIn0%3D"; //you can get this from the backend, and pass it by intent uri to the app
 
   function launchAppOnAppleDevice() {
-      const url = `meetgeekvoicerecorder://callback?user_uuid=${user_uuid}&escaped_string=string`;
+      const url = `meetgeekvoicerecorder://callback?cookie=${user_uuid}&escaped_string=string`;
       window.location.replace(url);
   }
 
   function launchAppOnAndroidDevice() {
-      const url = `intent:///#Intent;scheme=meetgeekvoicerecorder://callback?user_uuid=${user_uuid}&escaped_string=string;package=com.meetgeek.MeetGeekVoiceRecorder;end`;
+      const url = `intent:///#Intent;scheme=meetgeekvoicerecorder://callback?cookie=${user_uuid}&escaped_string=string;package=com.meetgeek.MeetGeekVoiceRecorder;end`;
       window.location.replace(url);
   }
   
