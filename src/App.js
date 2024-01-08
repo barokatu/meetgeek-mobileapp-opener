@@ -44,7 +44,7 @@ function App() {
         <input onChange={(e) => setCookie(e.target.value)} />
         <button onClick={launchAppOnAppleDevice} style={{backgroundColor:"#fbb000", fontWeight: 'bolder', fontSize:12, padding: 18, borderRadius: 10, borderWidth: 0, marginBottom: 10, width: 240}}>Open on iOS</button>
         <button onClick={launchAppOnAndroidDevice} style={{backgroundColor:"#fbb000", fontWeight: 'bolder', fontSize:12, padding: 18, borderRadius: 10, borderWidth: 0, marginBottom: 10, width: 240}}>Open on Android</button>
-        <button onClick={launchAppOnAndroidDevice} style={{backgroundColor:"#fbb000", fontWeight: 'bolder', fontSize:12, padding: 18, borderRadius: 10, borderWidth: 0, marginBottom: 10, width: 240}}>Open on Android</button>
+        <button onClick={requestGetUser} style={{backgroundColor:"#fbb000", fontWeight: 'bolder', fontSize:12, padding: 18, borderRadius: 10, borderWidth: 0, marginBottom: 10, width: 240}}>Testing Request</button>
         <p>
           Returned data: <b/>
           {returnedData !== '' ? JSON.stringify(returnedData) : null}
